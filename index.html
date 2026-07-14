@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cek Umur Kamu</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        input { padding: 10px; margin: 10px; }
+        button { padding: 10px 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Hitung Umur Kamu</h1>
+    <input type="date" id="tglLahir">
+    <button onclick="hitung()">Hitung Umur</button>
+    <h2 id="hasil"></h2>
+
+    <script>
+        function hitung() {
+            let tgl = new Date(document.getElementById('tglLahir').value);
+            let skrg = new Date();
+            let umur = skrg.getFullYear() - tgl.getFullYear();
+            document.getElementById('hasil').innerHTML = "Umur kamu sekitar " + umur + " tahun.";
+        }
+    </script>
+</body>
+</html>
